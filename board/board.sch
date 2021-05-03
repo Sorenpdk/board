@@ -720,7 +720,7 @@ F 3 "~" H 8300 3450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7900 3450 8200 3450
+	7900 3450 8000 3450
 $Comp
 L Device:C_Small C?
 U 1 1 6090E5DF
@@ -1008,4 +1008,29 @@ Wire Wire Line
 	10650 5900 10650 5850
 Text Notes 7200 7000 0    247  ~ 49
 Under construction
+$Comp
+L Device:D_Zener_Small D?
+U 1 1 6090273B
+P 8000 3350
+F 0 "D?" V 8046 3280 50  0000 R CNN
+F 1 "D_Zener_Small" V 7955 3280 50  0000 R CNN
+F 2 "" V 8000 3350 50  0001 C CNN
+F 3 "~" V 8000 3350 50  0001 C CNN
+	1    8000 3350
+	0    -1   -1   0   
+$EndComp
+Connection ~ 8000 3450
+Wire Wire Line
+	8000 3450 8200 3450
+$Comp
+L power:VCC #PWR?
+U 1 1 60903D35
+P 8000 3250
+F 0 "#PWR?" H 8000 3100 50  0001 C CNN
+F 1 "VCC" H 8015 3423 50  0000 C CNN
+F 2 "" H 8000 3250 50  0001 C CNN
+F 3 "" H 8000 3250 50  0001 C CNN
+	1    8000 3250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
