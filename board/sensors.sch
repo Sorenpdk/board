@@ -1,0 +1,292 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L board-rescue:UCC2751x U6
+U 1 1 609AF7D2
+P 8000 2450
+F 0 "U6" H 8025 3115 50  0000 C CNN
+F 1 "UCC2751x" H 8025 3024 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7950 2250 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/ucc27519.pdf?ts=1620714770626&ref_url=https%253A%252F%252Fwww.ti.com%252Fpower-management%252Fgate-drivers%252Flow-side-drivers%252Fproducts.html" H 8000 2450 50  0001 C CNN
+	1    8000 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0127
+U 1 1 609B06A3
+P 9750 1550
+F 0 "#PWR0127" H 9750 1400 50  0001 C CNN
+F 1 "+12V" H 9765 1723 50  0000 C CNN
+F 2 "" H 9750 1550 50  0001 C CNN
+F 3 "" H 9750 1550 50  0001 C CNN
+	1    9750 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C19
+U 1 1 609B1116
+P 9750 1800
+F 0 "C19" H 9842 1846 50  0000 L CNN
+F 1 "1u" H 9842 1755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9750 1800 50  0001 C CNN
+F 3 "~" H 9750 1800 50  0001 C CNN
+	1    9750 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 1550 9750 1650
+Text GLabel 8450 2050 2    50   Input ~ 0
++UCC_VDD
+$Comp
+L power:GND #PWR0128
+U 1 1 609B319A
+P 9750 1950
+F 0 "#PWR0128" H 9750 1700 50  0001 C CNN
+F 1 "GND" H 9755 1777 50  0000 C CNN
+F 2 "" H 9750 1950 50  0001 C CNN
+F 3 "" H 9750 1950 50  0001 C CNN
+	1    9750 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0129
+U 1 1 609B37ED
+P 7600 2200
+F 0 "#PWR0129" H 7600 1950 50  0001 C CNN
+F 1 "GND" V 7605 2072 50  0000 R CNN
+F 2 "" H 7600 2200 50  0001 C CNN
+F 3 "" H 7600 2200 50  0001 C CNN
+	1    7600 2200
+	0    1    1    0   
+$EndComp
+Text GLabel 8450 2350 2    50   Input ~ 0
+UCC_OUT
+Text GLabel 7600 2350 0    50   Input ~ 0
+UCC_IN
+Text GLabel 7600 2050 0    50   Input ~ 0
+UCC_EN
+Text GLabel 9550 1650 0    50   Input ~ 0
++UCC_VDD
+Wire Wire Line
+	9550 1650 9750 1650
+Wire Wire Line
+	9750 1900 9750 1950
+Wire Wire Line
+	9750 1700 9750 1650
+Connection ~ 9750 1650
+$Comp
+L Device:C_Small C20
+U 1 1 609B665A
+P 10150 1800
+F 0 "C20" H 10242 1846 50  0000 L CNN
+F 1 "100n" H 10242 1755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10150 1800 50  0001 C CNN
+F 3 "~" H 10150 1800 50  0001 C CNN
+	1    10150 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 1700 10150 1650
+Wire Wire Line
+	10150 1650 9750 1650
+Wire Wire Line
+	10150 1900 10150 1950
+Wire Wire Line
+	10150 1950 9750 1950
+Connection ~ 9750 1950
+Text GLabel 8900 3300 0    50   Input ~ 0
+UCC_OUT
+$Comp
+L Device:R_Small_US R2
+U 1 1 609B7282
+P 9150 3300
+F 0 "R2" V 8945 3300 50  0000 C CNN
+F 1 "100" V 9036 3300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9150 3300 50  0001 C CNN
+F 3 "~" H 9150 3300 50  0001 C CNN
+	1    9150 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8900 3300 9050 3300
+$Comp
+L Transistor_FET:NTR2101P Q2
+U 1 1 609B7E3E
+P 9650 3300
+F 0 "Q2" H 9855 3346 50  0000 L CNN
+F 1 "Find one" H 9855 3255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9850 3225 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub/Collateral/NTR2101P-D.PDF" H 9650 3300 50  0001 L CNN
+	1    9650 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 3300 9450 3300
+$Comp
+L power:GND #PWR0130
+U 1 1 609B8DCD
+P 9750 3600
+F 0 "#PWR0130" H 9750 3350 50  0001 C CNN
+F 1 "GND" H 9755 3427 50  0000 C CNN
+F 2 "" H 9750 3600 50  0001 C CNN
+F 3 "" H 9750 3600 50  0001 C CNN
+	1    9750 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 3600 9750 3500
+Text GLabel 9800 2900 2    50   Input ~ 0
+LOAD
+Wire Wire Line
+	9750 3100 9750 2900
+Wire Wire Line
+	9750 2900 9800 2900
+$Comp
+L power:+12V #PWR0131
+U 1 1 609B99FF
+P 9750 2600
+F 0 "#PWR0131" H 9750 2450 50  0001 C CNN
+F 1 "+12V" H 9765 2773 50  0000 C CNN
+F 2 "" H 9750 2600 50  0001 C CNN
+F 3 "" H 9750 2600 50  0001 C CNN
+	1    9750 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 2600 9750 2900
+Connection ~ 9750 2900
+Wire Notes Line
+	7000 1300 10750 1300
+Wire Notes Line
+	10750 1300 10750 3900
+Wire Notes Line
+	10750 3900 7000 3900
+Wire Notes Line
+	7000 3900 7000 1300
+Text Notes 10100 1400 0    50   ~ 0
+Solenoid Driver
+$Comp
+L board-rescue:ELVH-100A-HANH-C-N2A5 U5
+U 1 1 609C531F
+P 2700 2550
+F 0 "U5" H 2725 3315 50  0000 C CNN
+F 1 "ELVH-100A-HANH-C-N2A5" H 2725 3224 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 2700 2550 50  0001 C CNN
+F 3 "" H 2700 2550 50  0001 C CNN
+	1    2700 2550
+	1    0    0    -1  
+$EndComp
+Text GLabel 2350 2500 0    50   Input ~ 0
+SPI3_MISO
+Text GLabel 3100 2500 2    50   Input ~ 0
+SPI3_MOSI
+NoConn ~ 3100 2350
+NoConn ~ 2350 2350
+Text GLabel 3100 2200 2    50   Input ~ 0
+!SS_ELVH
+Text GLabel 3100 2050 2    50   Input ~ 0
+SPI3_SCLK
+$Comp
+L power:GND #PWR0132
+U 1 1 609C8144
+P 2150 2200
+F 0 "#PWR0132" H 2150 1950 50  0001 C CNN
+F 1 "GND" H 2155 2027 50  0000 C CNN
+F 2 "" H 2150 2200 50  0001 C CNN
+F 3 "" H 2150 2200 50  0001 C CNN
+	1    2150 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 2200 2350 2200
+Text GLabel 2350 2050 0    50   Input ~ 0
+ELVH_VDD
+Wire Notes Line
+	1450 1450 4500 1450
+Wire Notes Line
+	4500 1450 4500 3650
+Wire Notes Line
+	4500 3650 1450 3650
+Wire Notes Line
+	1450 3650 1450 1450
+Text Notes 3750 1650 0    50   ~ 0
+Pressure Sensor\n
+$Comp
+L Device:R_Small_US R3
+U 1 1 609D1715
+P 2400 5150
+F 0 "R3" H 2332 5104 50  0000 R CNN
+F 1 "R_Small_US" H 2332 5195 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 2400 5150 50  0001 C CNN
+F 3 "~" H 2400 5150 50  0001 C CNN
+	1    2400 5150
+	-1   0    0    1   
+$EndComp
+Text GLabel 2450 4550 0    50   Input ~ 0
++5VDD
+$Comp
+L Connector:Conn_01x03_Male J2
+U 1 1 609DFE2E
+P 2950 4700
+F 0 "J2" H 3058 4981 50  0000 C CNN
+F 1 "Molex Picoblade " H 3058 4890 50  0000 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53047-0310_1x03_P1.25mm_Vertical" H 2950 4700 50  0001 C CNN
+F 3 "~" H 2950 4700 50  0001 C CNN
+	1    2950 4700
+	1    0    0    -1  
+$EndComp
+Text GLabel 3250 4800 2    50   Input ~ 0
+TIM1_CH1
+$Comp
+L power:GND #PWR012
+U 1 1 609F7F10
+P 3400 4650
+F 0 "#PWR012" H 3400 4400 50  0001 C CNN
+F 1 "GND" V 3405 4522 50  0000 R CNN
+F 2 "" H 3400 4650 50  0001 C CNN
+F 3 "" H 3400 4650 50  0001 C CNN
+	1    3400 4650
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7550 3350 0    50   Input ~ 0
+UCC_EN
+$Comp
+L Device:R_Small_US R13
+U 1 1 609FAB86
+P 7700 3250
+F 0 "R13" H 7632 3204 50  0000 R CNN
+F 1 "10k" H 7632 3295 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7700 3250 50  0001 C CNN
+F 3 "~" H 7700 3250 50  0001 C CNN
+	1    7700 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7550 3350 7700 3350
+$Comp
+L power:+12V #PWR013
+U 1 1 609FB7AA
+P 7700 3050
+F 0 "#PWR013" H 7700 2900 50  0001 C CNN
+F 1 "+12V" H 7715 3223 50  0000 C CNN
+F 2 "" H 7700 3050 50  0001 C CNN
+F 3 "" H 7700 3050 50  0001 C CNN
+	1    7700 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3050 7700 3150
+$EndSCHEMATC
