@@ -289,4 +289,14 @@ F 3 "" H 7700 3050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7700 3050 7700 3150
+Wire Notes Line
+	4450 4250 4450 5850
+Wire Notes Line
+	4450 5850 1500 5850
+Wire Notes Line
+	1400 5850 1400 4250
+Wire Notes Line
+	1400 4250 4450 4250
+Text Notes 3950 4400 0    50   ~ 0
+Flow Sensor
 $EndSCHEMATC

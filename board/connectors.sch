@@ -57,4 +57,15 @@ F 3 "~" H 5550 2150 50  0001 C CNN
 	1    5550 2150
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_ARM_JTAG_SWD_10 J3
+U 1 1 60A4A004
+P 5200 3250
+F 0 "J3" H 4757 3296 50  0000 R CNN
+F 1 "Conn_ARM_JTAG_SWD_10" H 4757 3205 50  0000 R CNN
+F 2 "" H 5200 3250 50  0001 C CNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 4850 2000 50  0001 C CNN
+	1    5200 3250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
