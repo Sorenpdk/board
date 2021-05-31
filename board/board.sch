@@ -445,9 +445,9 @@ Text GLabel 4750 6800 2    50   Input ~ 0
 SPI2_CLK
 Text GLabel 4150 7000 2    50   Input ~ 0
 SPI2_MOSI
-Text GLabel 2750 6100 0    50   Input ~ 0
-FLASH_!HOLD
 Text GLabel 2750 6200 0    50   Input ~ 0
+FLASH_!HOLD
+Text GLabel 2750 6100 0    50   Input ~ 0
 FLASH_!WP
 Text GLabel 4150 6900 2    50   Input ~ 0
 SPI2_MISO
@@ -662,33 +662,27 @@ U 609AD7E8
 F0 "Sheet609AD7E7" 50
 F1 "sensors.sch" 50
 $EndSheet
-Text GLabel 4350 5850 2    50   Input ~ 0
-TIM1_CH1
 $Sheet
 S 2950 -1250 1300 900 
 U 609E7CAF
 F0 "Sheet609E7CAE" 50
 F1 "connectors.sch" 50
 $EndSheet
-Text GLabel 4350 5600 2    50   Input ~ 0
-SPI3_!CS
-Text GLabel 4350 5500 2    50   Input ~ 0
-SPI3_SCLK
-Text GLabel 4350 5400 2    50   Input ~ 0
-SPI3_MOSI
-Text GLabel 4350 5300 2    50   Input ~ 0
-SPI3_MISO
+Text GLabel 4150 4200 2    50   Input ~ 0
+SPI1_!CS
+Text GLabel 4150 4300 2    50   Input ~ 0
+SPI1_SCLK
+Text GLabel 4150 4500 2    50   Input ~ 0
+SPI1_MOSI
+Text GLabel 4150 4400 2    50   Input ~ 0
+SPI1_MISO
 Wire Notes Line
 	3700 600  3700 1500
 Wire Notes Line
 	5450 1500 5450 600 
-Text GLabel 4550 6150 2    50   Input ~ 0
-USART1_TX
-Text GLabel 4550 6250 2    50   Input ~ 0
-USART1_RX
-Text GLabel 2650 6950 0    50   Input ~ 0
+Text GLabel 4150 4000 2    50   Input ~ 0
 LCD_EN
-Text GLabel 2650 6750 0    50   Input ~ 0
+Text GLabel 4150 4100 2    50   Input ~ 0
 LCD_RW
 $Comp
 L Device:LED_Small D1
@@ -820,15 +814,15 @@ F 3 "" H 6850 3100 50  0001 C CNN
 	1    6850 3100
 	1    0    0    -1  
 $EndComp
-Text GLabel 2650 6650 0    50   Input ~ 0
+Text GLabel 2750 5500 0    50   Input ~ 0
 LCD_DB0
-Text GLabel 2650 6550 0    50   Input ~ 0
+Text GLabel 2750 5600 0    50   Input ~ 0
 LCD_DB1
-Text GLabel 2650 6450 0    50   Input ~ 0
+Text GLabel 2750 5700 0    50   Input ~ 0
 LCD_DB2
-Text GLabel 2650 6350 0    50   Input ~ 0
+Text GLabel 2750 5800 0    50   Input ~ 0
 LCD_DB3
-Text GLabel 2650 6850 0    50   Input ~ 0
+Text GLabel 4150 3900 2    50   Input ~ 0
 LCD_RS
 $Comp
 L board-rescue:TPS542941 U2
@@ -1285,8 +1279,6 @@ Wire Notes Line
 Wire Notes Line
 	6700 2800 6700 6250
 Wire Notes Line
-	5300 3050 5300 7600
-Wire Notes Line
 	5300 7600 1950 7600
 Wire Notes Line
 	1950 7600 1950 3050
@@ -1375,32 +1367,50 @@ Wire Notes Line
 	600  600  5450 600 
 Text Notes 2800 700  0    50   ~ 0
 MCU PWR Decoupling\n
-$Comp
-L Device:R_Small_US R7
-U 1 1 60B240EB
-P 4400 6150
-F 0 "R7" V 4300 6100 50  0000 C CNN
-F 1 "220" V 4300 6250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 4400 6150 50  0001 C CNN
-F 3 "~" H 4400 6150 50  0001 C CNN
-	1    4400 6150
-	0    1    1    0   
-$EndComp
+NoConn ~ 9250 5600
+NoConn ~ 8400 5600
+Text GLabel 4150 6500 2    50   Input ~ 0
+TIM2_CH3
+Text GLabel 4150 6600 2    50   Input ~ 0
+TIM2_CH4
+Text GLabel 4150 6100 2    50   Input ~ 0
+TIM4_CH1
+Text GLabel 4150 6200 2    50   Input ~ 0
+TIM4_CH2
+Text GLabel 4150 6300 2    50   Input ~ 0
+TIM4_CH3
+Wire Wire Line
+	2500 6600 2550 6600
+Wire Wire Line
+	2500 6500 2550 6500
 $Comp
 L Device:R_Small_US R13
 U 1 1 60B24566
-P 4400 6250
-F 0 "R13" V 4500 6200 50  0000 C CNN
-F 1 "220" V 4500 6350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 4400 6250 50  0001 C CNN
-F 3 "~" H 4400 6250 50  0001 C CNN
-	1    4400 6250
-	0    1    1    0   
+P 2650 6600
+F 0 "R13" V 2550 6550 50  0000 C CNN
+F 1 "220" V 2550 6750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2650 6600 50  0001 C CNN
+F 3 "~" H 2650 6600 50  0001 C CNN
+	1    2650 6600
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	4550 6150 4500 6150
-Wire Wire Line
-	4550 6250 4500 6250
-NoConn ~ 9250 5600
-NoConn ~ 8400 5600
+$Comp
+L Device:R_Small_US R7
+U 1 1 60B240EB
+P 2650 6500
+F 0 "R7" V 2750 6450 50  0000 C CNN
+F 1 "220" V 2750 6600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2650 6500 50  0001 C CNN
+F 3 "~" H 2650 6500 50  0001 C CNN
+	1    2650 6500
+	0    -1   -1   0   
+$EndComp
+Wire Notes Line
+	5300 3050 5300 7600
+Text GLabel 2500 6600 0    50   Input ~ 0
+USART3_RX
+Text GLabel 2500 6500 0    50   Input ~ 0
+USART3_TX
+Text GLabel 4150 4600 2    50   Input ~ 0
+RCC_MCO1
 $EndSCHEMATC
