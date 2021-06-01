@@ -167,7 +167,7 @@ L Device:R_Small_US R21
 U 1 1 60B2F8A8
 P 4350 4550
 F 0 "R21" V 4300 4450 50  0000 C CNN
-F 1 "100" V 4300 4650 50  0000 C CNN
+F 1 "22" V 4300 4650 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 4350 4550 50  0001 C CNN
 F 3 "~" H 4350 4550 50  0001 C CNN
 	1    4350 4550
@@ -178,7 +178,7 @@ L Device:R_Small_US R18
 U 1 1 60B2FA94
 P 3900 4450
 F 0 "R18" V 3800 4350 50  0000 C CNN
-F 1 "100" V 3800 4500 50  0000 C CNN
+F 1 "22" V 3800 4500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 3900 4450 50  0001 C CNN
 F 3 "~" H 3900 4450 50  0001 C CNN
 	1    3900 4450
@@ -188,15 +188,13 @@ $Comp
 L Device:R_Small_US R19
 U 1 1 60B2FE42
 P 4000 4650
-F 0 "R19" V 3950 4550 50  0000 C CNN
-F 1 "100" V 3950 4750 50  0000 C CNN
+F 0 "R19" V 4100 4550 50  0000 C CNN
+F 1 "22" V 4100 4750 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 4000 4650 50  0001 C CNN
 F 3 "~" H 4000 4650 50  0001 C CNN
 	1    4000 4650
 	0    1    1    0   
 $EndComp
-Text Notes 2650 3350 0    50   ~ 0
-Decoupling filter for reset pin ??????\n
 Wire Wire Line
 	3800 4450 3700 4450
 Text GLabel 4700 4650 2    50   Input ~ 0
@@ -229,7 +227,7 @@ $EndComp
 Wire Wire Line
 	3200 5200 3200 5150
 Text GLabel 4600 3900 2    50   Input ~ 0
-SWD_!RESET
+NRST
 $Comp
 L Device:C_Small C30
 U 1 1 60B3C3D4
@@ -253,42 +251,12 @@ F 3 "" H 4350 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3700 4250 3850 4250
-Wire Wire Line
-	3850 4250 3850 3900
-Wire Wire Line
 	3850 3900 4350 3900
 Wire Wire Line
 	4350 3950 4350 3900
 Connection ~ 4350 3900
 Wire Wire Line
 	4350 3900 4600 3900
-$Comp
-L Device:R_Small_US R20
-U 1 1 60B3DCEE
-P 4350 3700
-F 0 "R20" V 4250 3600 50  0000 C CNN
-F 1 "10k" V 4250 3750 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 4350 3700 50  0001 C CNN
-F 3 "~" H 4350 3700 50  0001 C CNN
-	1    4350 3700
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4350 3800 4350 3900
-$Comp
-L power:+3.3V #PWR050
-U 1 1 60B3ECAF
-P 4350 3550
-F 0 "#PWR050" H 4350 3400 50  0001 C CNN
-F 1 "+3.3V" H 4365 3723 50  0000 C CNN
-F 2 "" H 4350 3550 50  0001 C CNN
-F 3 "" H 4350 3550 50  0001 C CNN
-	1    4350 3550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4350 3550 4350 3600
 $Comp
 L power:+3.3V #PWR047
 U 1 1 60B3F606
@@ -316,9 +284,9 @@ Text Notes 6850 3250 0    50   ~ 0
 Mounting holes\n
 Text Notes 4500 3250 0    50   ~ 0
 Serial Wire Debug\n
-Text GLabel 6150 2000 2    50   Input ~ 0
+Text GLabel 6400 2000 2    50   Input ~ 0
 USART3_TX
-Text GLabel 6150 2100 2    50   Input ~ 0
+Text GLabel 6400 2100 2    50   Input ~ 0
 USART3_RX
 $Comp
 L power:GND #PWR053
@@ -331,8 +299,6 @@ F 3 "" H 5950 2650 50  0001 C CNN
 	1    5950 2650
 	1    0    0    -1  
 $EndComp
-Text GLabel 5950 2550 0    50   Input ~ 0
-12V_IN
 $Comp
 L Connector:Screw_Terminal_01x02 J5
 U 1 1 60CCAEBB
@@ -352,8 +318,8 @@ $Comp
 L Connector:Conn_01x04_Male J4
 U 1 1 60CCE439
 P 5950 2000
-F 0 "J4" H 6500 2250 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 6550 2150 50  0000 C CNN
+F 0 "J4" H 6450 2300 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 6600 2250 50  0000 C CNN
 F 2 "" H 5950 2000 50  0001 C CNN
 F 3 "~" H 5950 2000 50  0001 C CNN
 	1    5950 2000
@@ -401,4 +367,62 @@ Wire Notes Line
 	5200 3150 5200 5450
 Text Notes 7150 6950 0    217  ~ 43
 Connectors
+$Comp
+L Device:R_Small_US R?
+U 1 1 60B65AA2
+P 3850 4100
+F 0 "R?" V 3750 4000 50  0000 C CNN
+F 1 "22" V 3750 4150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3850 4100 50  0001 C CNN
+F 3 "~" H 3850 4100 50  0001 C CNN
+	1    3850 4100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3700 4250 3850 4250
+Wire Wire Line
+	3850 4250 3850 4200
+Wire Wire Line
+	3850 3900 3850 4000
+$Comp
+L Device:R_Small_US R?
+U 1 1 60B676F2
+P 6300 2000
+F 0 "R?" V 6200 1950 50  0000 C CNN
+F 1 "22" V 6200 2100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6300 2000 50  0001 C CNN
+F 3 "~" H 6300 2000 50  0001 C CNN
+	1    6300 2000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6200 2000 6150 2000
+$Comp
+L Device:R_Small_US R?
+U 1 1 60B68FD5
+P 6300 2100
+F 0 "R?" V 6400 2050 50  0000 C CNN
+F 1 "22" V 6400 2200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6300 2100 50  0001 C CNN
+F 3 "~" H 6300 2100 50  0001 C CNN
+	1    6300 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6200 2100 6150 2100
+$Comp
+L power:+12V #PWR?
+U 1 1 60B819F2
+P 5800 2450
+F 0 "#PWR?" H 5800 2300 50  0001 C CNN
+F 1 "+12V" H 5815 2623 50  0000 C CNN
+F 2 "" H 5800 2450 50  0001 C CNN
+F 3 "" H 5800 2450 50  0001 C CNN
+	1    5800 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2450 5800 2550
+Wire Wire Line
+	5800 2550 5950 2550
 $EndSCHEMATC

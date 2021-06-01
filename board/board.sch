@@ -818,10 +818,6 @@ Wire Notes Line
 	4500 650  4500 1550
 Wire Notes Line
 	6200 650  4500 650 
-Wire Wire Line
-	4850 2100 4900 2100
-Text GLabel 4850 2100 0    50   Input ~ 0
-12V_IN
 NoConn ~ 6200 4450
 NoConn ~ 7050 4450
 Wire Notes Line
@@ -1398,4 +1394,19 @@ Text Notes 2950 -1400 0    98   ~ 20
 Connectors
 Text Notes 1400 -1400 0    98   ~ 20
 Sensors
+$Comp
+L power:+12V #PWR?
+U 1 1 60B83527
+P 4800 1950
+F 0 "#PWR?" H 4800 1800 50  0001 C CNN
+F 1 "+12V" H 4815 2123 50  0000 C CNN
+F 2 "" H 4800 1950 50  0001 C CNN
+F 3 "" H 4800 1950 50  0001 C CNN
+	1    4800 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 1950 4800 2100
+Wire Wire Line
+	4800 2100 4900 2100
 $EndSCHEMATC
