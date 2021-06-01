@@ -16,17 +16,6 @@ $EndDescr
 Text Notes 7550 6950 0    138  ~ 28
 Flush Surveillance Concept
 $Comp
-L MCU_ST_STM32F4:STM32F405RGTx U1
-U 1 1 608D985A
-P 2400 4000
-F 0 "U1" H 3000 5750 50  0000 C CNN
-F 1 "STM32F405RGTx" H 2900 2200 50  0000 C CNN
-F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 1800 2300 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00037051.pdf" H 2400 4000 50  0001 C CNN
-	1    2400 4000
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3V3 #PWR06
 U 1 1 608DC810
 P 2200 1950
@@ -580,36 +569,6 @@ Text GLabel 3100 4800 2    50   Input ~ 0
 TIM4_CH2
 Text GLabel 3100 4900 2    50   Input ~ 0
 TIM4_CH3
-Wire Wire Line
-	1450 5200 1500 5200
-Wire Wire Line
-	1450 5100 1500 5100
-$Comp
-L Device:R_Small_US R2
-U 1 1 60B24566
-P 1600 5200
-F 0 "R2" V 1500 5150 50  0000 C CNN
-F 1 "220" V 1500 5350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 1600 5200 50  0001 C CNN
-F 3 "~" H 1600 5200 50  0001 C CNN
-	1    1600 5200
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R_Small_US R1
-U 1 1 60B240EB
-P 1600 5100
-F 0 "R1" V 1700 5050 50  0000 C CNN
-F 1 "220" V 1700 5200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 1600 5100 50  0001 C CNN
-F 3 "~" H 1600 5100 50  0001 C CNN
-	1    1600 5100
-	0    -1   -1   0   
-$EndComp
-Text GLabel 1450 5200 0    50   Input ~ 0
-USART3_RX
-Text GLabel 1450 5100 0    50   Input ~ 0
-USART3_TX
 Text GLabel 3100 3200 2    50   Input ~ 0
 RCC_MCO1
 Wire Notes Line
@@ -1211,8 +1170,6 @@ F 3 "" H 8550 3200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5700 2100 5850 2100
-Wire Wire Line
-	5300 2100 5500 2100
 $Comp
 L board-rescue:TPS542941 U2
 U 1 1 60A6034A
@@ -1234,28 +1191,6 @@ F 2 "Fuse:Fuse_1206_3216Metric" H 5650 1900 50  0001 L CNN
 F 3 "~" H 5600 2100 50  0001 C CNN
 	1    5600 2100
 	0    1    1    0   
-$EndComp
-$Comp
-L Transistor_FET:AO3401A Q1
-U 1 1 60907C55
-P 5100 2200
-F 0 "Q1" V 5442 2200 50  0000 C CNN
-F 1 "AO3401A" V 5351 2200 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5300 2125 50  0001 L CIN
-F 3 "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" H 5100 2200 50  0001 L CNN
-	1    5100 2200
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR015
-U 1 1 6090B6B1
-P 5100 2400
-F 0 "#PWR015" H 5100 2150 50  0001 C CNN
-F 1 "GND" H 5105 2227 50  0000 C CNN
-F 2 "" H 5100 2400 50  0001 C CNN
-F 3 "" H 5100 2400 50  0001 C CNN
-	1    5100 2400
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Ferrite_Bead_Small FB2
@@ -1407,8 +1342,23 @@ F 3 "" H 4800 1950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4800 1950 4800 2100
-Wire Wire Line
-	4800 2100 4900 2100
 Text Notes 6650 5550 0    98   ~ 20
 Find RGB\n
+Text GLabel 1700 5100 0    50   Input ~ 0
+USART3_TX
+Text GLabel 1700 5200 0    50   Input ~ 0
+USART3_RX
+$Comp
+L MCU_ST_STM32F4:STM32F405RGTx U?
+U 1 1 60C86C3C
+P 2400 4000
+F 0 "U?" H 2850 5800 50  0000 C CNN
+F 1 "STM32F405RGTx" H 2950 2150 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 1800 2300 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00037051.pdf" H 2400 4000 50  0001 C CNN
+	1    2400 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2100 5500 2100
 $EndSCHEMATC
