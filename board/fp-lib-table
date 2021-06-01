@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Modules)(type KiCad)(uri "Z:/Program Files/KiCad/share/kicad/modules")(options "")(descr ""))
+)
