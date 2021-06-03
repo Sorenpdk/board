@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name Modules)(type KiCad)(uri "Z:/Program Files/KiCad/share/kicad/modules")(options "")(descr ""))
+  (lib (name FDV305N)(type KiCad)(uri ${KISYSMOD}/FDV305N)(options "")(descr ""))
 )

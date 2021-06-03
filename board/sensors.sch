@@ -178,40 +178,25 @@ Wire Notes Line
 	5100 3650 5100 1050
 Text Notes 8250 1150 0    50   ~ 0
 Solenoid Driver
-$Comp
-L board-rescue:ELVH-100A-HANH-C-N2A5 U3
-U 1 1 609C531F
-P 3850 2150
-F 0 "U3" H 3875 2915 50  0000 C CNN
-F 1 "ELVH-100A-HANH-C-N2A5" H 3875 2824 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 3850 2150 50  0001 C CNN
-F 3 "" H 3850 2150 50  0001 C CNN
-	1    3850 2150
-	1    0    0    -1  
-$EndComp
-Text GLabel 3500 2100 0    50   Input ~ 0
+Text GLabel 3750 1850 0    50   Input ~ 0
 SPI1_MISO
-Text GLabel 4250 2100 2    50   Input ~ 0
+Text GLabel 3750 1650 0    50   Input ~ 0
 SPI1_MOSI
-NoConn ~ 4250 1950
-NoConn ~ 3500 1950
-Text GLabel 4250 1800 2    50   Input ~ 0
+Text GLabel 3750 1550 0    50   Input ~ 0
 SPI1_!CS
-Text GLabel 4250 1650 2    50   Input ~ 0
+Text GLabel 3750 1750 0    50   Input ~ 0
 SPI1_CLK
 $Comp
 L power:GND #PWR035
 U 1 1 609C8144
-P 3300 1800
-F 0 "#PWR035" H 3300 1550 50  0001 C CNN
-F 1 "GND" H 3305 1627 50  0000 C CNN
-F 2 "" H 3300 1800 50  0001 C CNN
-F 3 "" H 3300 1800 50  0001 C CNN
-	1    3300 1800
+P 3750 1950
+F 0 "#PWR035" H 3750 1700 50  0001 C CNN
+F 1 "GND" H 3755 1777 50  0000 C CNN
+F 2 "" H 3750 1950 50  0001 C CNN
+F 3 "" H 3750 1950 50  0001 C CNN
+	1    3750 1950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3300 1800 3500 1800
 Wire Notes Line
 	1850 1050 4900 1050
 Text Notes 4250 1150 0    50   ~ 0
@@ -222,7 +207,7 @@ U 1 1 609DFE2E
 P 3800 3300
 F 0 "J1" H 4050 3500 50  0000 C CNN
 F 1 "Molex Picoblade " H 4000 3050 50  0000 C CNN
-F 2 "Connector_Molex:Molex_PicoBlade_53047-0310_1x03_P1.25mm_Vertical" H 3800 3300 50  0001 C CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 3800 3300 50  0001 C CNN
 F 3 "~" H 3800 3300 50  0001 C CNN
 	1    3800 3300
 	1    0    0    -1  
@@ -609,18 +594,14 @@ $EndComp
 $Comp
 L power:+5V #PWR034
 U 1 1 60B77592
-P 3250 1550
-F 0 "#PWR034" H 3250 1400 50  0001 C CNN
-F 1 "+5V" H 3265 1723 50  0000 C CNN
-F 2 "" H 3250 1550 50  0001 C CNN
-F 3 "" H 3250 1550 50  0001 C CNN
-	1    3250 1550
+P 3750 1450
+F 0 "#PWR034" H 3750 1300 50  0001 C CNN
+F 1 "+5V" H 3765 1623 50  0000 C CNN
+F 2 "" H 3750 1450 50  0001 C CNN
+F 3 "" H 3750 1450 50  0001 C CNN
+	1    3750 1450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3250 1550 3250 1650
-Wire Wire Line
-	3250 1650 3500 1650
 $Comp
 L power:+5V #PWR036
 U 1 1 60B78A52
@@ -724,5 +705,16 @@ F 2 "" H 7800 4400 50  0001 C CNN
 F 3 "" H 7800 4400 50  0001 C CNN
 	1    7800 4400
 	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x06_Male J6
+U 1 1 60B78D57
+P 3950 1750
+F 0 "J6" H 3922 1632 50  0000 R CNN
+F 1 "Conn_01x06_Male" H 3922 1723 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 3950 1750 50  0001 C CNN
+F 3 "~" H 3950 1750 50  0001 C CNN
+	1    3950 1750
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC
