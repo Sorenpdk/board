@@ -356,8 +356,6 @@ F 3 "" H 1650 7000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1800 6850 1650 6850
-Wire Wire Line
 	1650 6850 1650 6800
 Wire Wire Line
 	1550 6700 1450 6700
@@ -779,7 +777,7 @@ VIN2
 Text GLabel 6200 4600 0    50   Input ~ 0
 VFB1
 Text GLabel 6200 4150 0    50   Input ~ 0
-PGND1
+GND
 Text GLabel 6200 4000 0    50   Input ~ 0
 SW1
 Text GLabel 6200 3850 0    50   Input ~ 0
@@ -791,11 +789,11 @@ VBST2
 Text GLabel 7050 4000 2    50   Input ~ 0
 SW2
 Text GLabel 7050 4150 2    50   Input ~ 0
-PGND2
+GND
 Text GLabel 7050 4600 2    50   Input ~ 0
 VFB2
 Text GLabel 7850 3550 0    50   Input ~ 0
-PGND2
+GND
 Wire Wire Line
 	7150 4750 7050 4750
 Wire Wire Line
@@ -990,9 +988,9 @@ Check values(val, ESR,Vrating, size) + footprint
 Text Notes 6650 2000 0    50   ~ 0
 12V +/- 10%
 Text GLabel 6200 4750 0    50   Input ~ 0
-TPS_GND
+GND
 Text GLabel 5150 4100 2    50   Input ~ 0
-TPS_GND
+GND
 Text GLabel 6200 4300 0    50   Input ~ 0
 EN1_IN
 Text GLabel 5950 2800 2    50   Input ~ 0
@@ -1004,7 +1002,7 @@ VBST1
 Text GLabel 5950 3250 2    50   Input ~ 0
 SW1
 Text GLabel 5500 3500 2    50   Input ~ 0
-PGND1
+GND
 $Comp
 L power:GND #PWR017
 U 1 1 60A75B9C
@@ -1298,7 +1296,7 @@ $EndComp
 Wire Wire Line
 	4800 2100 5500 2100
 $Comp
-L ASMB-KTF0-0A306:ASMB-KTF0-0A306 D2
+L board-rescue:ASMB-KTF0-0A306-ASMB-KTF0-0A306 D2
 U 1 1 60B96BC3
 P 5700 5850
 F 0 "D2" H 5980 5946 50  0000 L CNN
@@ -1336,7 +1334,7 @@ B
 Text Notes 5850 5750 0    50   ~ 0
 G
 $Comp
-L FDV305N:FDV305N Q3
+L board-rescue:FDV305N-FDV305N Q3
 U 1 1 60BC1078
 P 6050 6550
 F 0 "Q3" H 6258 6596 50  0000 L CNN
@@ -1351,7 +1349,7 @@ F 7 "30 Jan 2018" H 6050 6550 50  0001 L BNN "PARTREV"
 	1    0    0    -1  
 $EndComp
 $Comp
-L FDV305N:FDV305N Q2
+L board-rescue:FDV305N-FDV305N Q2
 U 1 1 60BC32FF
 P 5600 6850
 F 0 "Q2" H 5808 6896 50  0000 L CNN
@@ -1366,7 +1364,7 @@ F 7 "30 Jan 2018" H 5600 6850 50  0001 L BNN "PARTREV"
 	1    0    0    -1  
 $EndComp
 $Comp
-L FDV305N:FDV305N Q1
+L board-rescue:FDV305N-FDV305N Q1
 U 1 1 60BC3BA9
 P 5200 6550
 F 0 "Q1" H 5408 6596 50  0000 L CNN
@@ -1380,4 +1378,15 @@ F 7 "30 Jan 2018" H 5200 6550 50  0001 L BNN "PARTREV"
 	1    5200 6550
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1650 6850 1800 6850
+Wire Wire Line
+	1650 6850 1650 7000
+Connection ~ 1650 6850
+Text GLabel 3100 3700 2    50   Input ~ 0
+SWDIO
+Text GLabel 3100 3800 2    50   Input ~ 0
+SWDCLK
+Text GLabel 3100 4400 2    50   Input ~ 0
+SWO
 $EndSCHEMATC

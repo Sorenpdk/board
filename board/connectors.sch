@@ -284,9 +284,9 @@ Text Notes 6850 3250 0    50   ~ 0
 Mounting holes\n
 Text Notes 4500 3250 0    50   ~ 0
 Serial Wire Debug\n
-Text GLabel 6400 2000 2    50   Input ~ 0
-USART3_TX
 Text GLabel 6400 2100 2    50   Input ~ 0
+USART3_TX
+Text GLabel 6400 2000 2    50   Input ~ 0
 USART3_RX
 $Comp
 L power:GND #PWR063
