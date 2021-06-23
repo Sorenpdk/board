@@ -1,4 +1,4 @@
-update=6/3/2021 12:58:44 PM
+update=08-06-2021 12:01:24
 version=1
 last_client=kicad
 [general]
@@ -28,7 +28,7 @@ PageLayoutDescrFile=
 LastNetListRead=board.net
 CopperLayerCount=4
 BoardThickness=1.6
-AllowMicroVias=0
+AllowMicroVias=1
 AllowBlindVias=0
 RequireCourtyardDefinitions=0
 ProhibitOverlappingCourtyards=1
@@ -43,6 +43,8 @@ TrackWidth2=0.3
 TrackWidth3=0.5
 ViaDiameter1=0.8
 ViaDrill1=0.4
+ViaDiameter2=0.5
+ViaDrill2=0.3
 dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
