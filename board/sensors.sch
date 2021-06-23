@@ -27,13 +27,13 @@ $EndComp
 Text Notes 9550 1200 0    50   ~ 0
 Solenoid Driver
 Text GLabel 4200 1800 2    50   Input ~ 0
-SPI1_MISO
+SPI3_MISO
 Text GLabel 4200 1600 2    50   Input ~ 0
-SPI1_MOSI
+SPI3_MOSI
 Text GLabel 3700 1700 0    50   Input ~ 0
-SPI1_!CS
+SPI3_!CS
 Text GLabel 4200 1700 2    50   Input ~ 0
-SPI1_CLK
+SPI3_CLK
 $Comp
 L power:GND #PWR035
 U 1 1 609C8144
@@ -495,7 +495,7 @@ F 3 "~" V 9150 2550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text GLabel 6150 2050 0    50   Input ~ 0
-GPIO
+DRV_EN
 $Comp
 L power:GND #PWR017
 U 1 1 60C2BBF0
@@ -595,7 +595,7 @@ Wire Wire Line
 Wire Wire Line
 	8150 1850 8150 1950
 Text GLabel 6150 1950 0    50   Input ~ 0
-DAC
+DAC_OUT1
 Text GLabel 6150 2350 0    50   Input ~ 0
 CBOOT
 NoConn ~ 6150 2150
@@ -656,11 +656,13 @@ $EndComp
 Text GLabel 5650 2050 0    50   Input ~ 0
 STATUS_OK
 $Comp
-L DRV104PWPR:DRV104PWPR U3
+L board-rescue:DRV104PWPR-DRV104PWPR U3
 U 1 1 60CA87DC
 P 7150 2350
-F 0 "U3" H 7150 3520 50  0000 C CNN
-F 1 "DRV104PWPR" H 7150 3429 50  0000 C CNN
+AR Path="/60CA87DC" Ref="U3"  Part="1" 
+AR Path="/609AD7E8/60CA87DC" Ref="U3"  Part="1" 
+F 0 "U3" H 7900 3400 50  0000 C CNN
+F 1 "DRV104PWPR" H 7850 1250 50  0000 C CNN
 F 2 "DRV104PWPR:IC_TPS27S100BPWPR" H 7150 2350 50  0001 L BNN
 F 3 "" H 7150 2350 50  0001 L BNN
 	1    7150 2350
@@ -706,7 +708,7 @@ Connection ~ 8150 1850
 Text GLabel 8550 2400 0    50   Input ~ 0
 DRVOUT
 Text GLabel 8900 3200 0    50   Input ~ 0
-DAC
+DAC_OUT1
 Wire Wire Line
 	8900 3200 8950 3200
 Wire Wire Line
@@ -746,8 +748,8 @@ $Comp
 L Connector_Generic:Conn_02x03_Odd_Even J?
 U 1 1 60CE9B39
 P 3900 1700
-F 0 "J?" H 3950 2017 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 3950 1926 50  0000 C CNN
+F 0 "J?" H 4050 1950 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 4300 1450 50  0000 C CNN
 F 2 "" H 3900 1700 50  0001 C CNN
 F 3 "~" H 3900 1700 50  0001 C CNN
 	1    3900 1700

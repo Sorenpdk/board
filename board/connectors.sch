@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Mechanical:MountingHole H1
-U 1 1 609E84AC
-P 5800 3500
-F 0 "H1" H 5900 3546 50  0000 L CNN
-F 1 "MountingHole" H 5900 3455 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.5mm_Pad_Via" H 5800 3500 50  0001 C CNN
-F 3 "~" H 5800 3500 50  0001 C CNN
-	1    5800 3500
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mechanical:MountingHole H3
 U 1 1 609E885E
 P 6550 3500
@@ -91,21 +80,6 @@ F 3 "" H 4000 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 3900 2700
-$Comp
-L power:VBUS #PWR061
-U 1 1 60B231C0
-P 4400 1950
-F 0 "#PWR061" H 4400 1800 50  0001 C CNN
-F 1 "VBUS" H 4415 2123 50  0000 C CNN
-F 2 "" H 4400 1950 50  0001 C CNN
-F 3 "" H 4400 1950 50  0001 C CNN
-	1    4400 1950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4400 1950 4400 2100
-Wire Wire Line
-	4400 2100 4300 2100
 Text GLabel 4300 2300 2    50   Input ~ 0
 USB_CONN_D+
 Text GLabel 4300 2400 2    50   Input ~ 0
@@ -754,4 +728,16 @@ Wire Notes Line
 	8050 3350 10550 3350
 Wire Notes Line
 	8050 1350 10550 1350
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 609E84AC
+P 5800 3500
+F 0 "H1" H 5900 3546 50  0000 L CNN
+F 1 "MountingHole" H 5900 3455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.5mm_Pad_Via" H 5800 3500 50  0001 C CNN
+F 3 "~" H 5800 3500 50  0001 C CNN
+	1    5800 3500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4300 2100
 $EndSCHEMATC
